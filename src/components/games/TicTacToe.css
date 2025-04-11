@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
@@ -10,8 +11,71 @@
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: all 0.3s ease;
+  padding: 20px;
+}
+/* Mobile-first media query */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .game-area {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+    gap: 5px;
+  }
+
+  .square {
+    width: 100%;
+    height: 80px; /* Smaller squares */
+    font-size: 1.8rem;
+    aspect-ratio: 1/1; /* Maintain square shape */
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 340px; /* Match game board width */
+    margin-top: 0;
+  }
+
+  .sidebar input {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
+/* For very small screens */
+@media (max-width: 480px) {
+  .board {
+    grid-template-columns: repeat(3, minmax(60px, 1fr));
+  }
+
+  .square {
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .status {
+    font-size: 1rem;
+  }
+
+  .winner {
+    font-size: 1.2rem;
+  }
+
+  .x-winner,
+  .o-winner {
+    font-size: 1.8rem;
+  }
+}
 .game-area {
   display: flex;
   flex-direction: column;
