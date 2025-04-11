@@ -170,6 +170,13 @@
   color: #dc3545;
 }
 
+@media (max-width: 768px) {
+  .x-winner,
+  .o-winner {
+    font-size: 1.5rem; /* Mobile size */
+  }
+}
+
 .highlight {
   background-color: var(--highlight-bg) !important;
   border: 2px solid var(--highlight-border);
