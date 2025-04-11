@@ -1,0 +1,72 @@
+:root {
+  /* Color Basics */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --card-bg: #ffffff;
+  --x-color: #4361ee;
+  --o-color: #f72585;
+  --highlight-bg: #ffeeba;
+  --highlight-border: #ffc107;
+
+  /* Text Colors */
+  --text-primary: #333333; /* Main text color */
+  --text-secondary: #555555; /* Secondary text */
+
+  /* Accent Colors */
+  --accent-primary: #4361ee; /* Primary brand color */
+  --accent-secondary: #3a0ca3; /* Secondary brand color */
+
+  /* Borders & Shadows */
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Header Specific */
+  --header-bg-light: #f8f9fa;
+  --header-bg-dark: #1a1a2e;
+  --header-bg: var(--header-bg-light);
+}
+.dark-theme {
+  /* Color Basics */
+  --bg-primary: #121212;
+  --bg-secondary: #1a1a1a;
+  --card-bg: #2a2a2a;
+  --x-color: #4895ef;
+  --o-color: #f72585;
+  --highlight-bg: #2a2a2a;
+  --highlight-border: #ffd166;
+  --square-hover: #3a3a3a;
+
+  /* Text Colors */
+  --text-primary: #f5f5f5;
+  --text-secondary: #cccccc;
+
+  /* Accent Colors */
+  --accent-primary: #4895ef;
+  --accent-secondary: #3f37c9;
+
+  /* Borders & Shadows */
+  --border-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+
+  /* Component Specific */
+  --header-bg: var(--header-bg-dark);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}

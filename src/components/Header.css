@@ -1,0 +1,120 @@
+.header {
+  background-color: var(--header-bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.header h2 a {
+  color: var(--text-primary); /* Changed from hardcoded #fff */
+  text-decoration: none;
+  background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+  background-size: 100%;
+}
+
+.header h2 a:hover {
+  background-size: 200%;
+  background-position: right center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  height: 100%;
+}
+
+nav a {
+  color: var(--text-primary); /* Changed from #e6e6e6 */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-primary); /* Changed from #fff */
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-secondary);
+}
+
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  transition: width 0.3s ease;
+}
+
+.theme-toggle:hover::after {
+  width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+}
