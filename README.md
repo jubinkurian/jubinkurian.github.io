@@ -1,3 +1,3 @@
 # Getting Started
 
-https://jubinkurian.github.io/
+https://jubinkurian.vercel.app/
