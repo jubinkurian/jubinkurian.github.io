@@ -18,7 +18,7 @@ const Sudoku = () => {
   // Generate a new puzzle and initialize state
   const generatePuzzle = () => {
     const { puzzle } = getSudoku("easy");
-    console.log(puzzle);
+    //console.log(puzzle);
     const puzzleArray = puzzle.split("").map((val) => (val === "-" ? 0 : +val));
 
     const newGrid = Array.from({ length: 9 }, (_, i) =>
