@@ -68,9 +68,9 @@ const Sudoku = () => {
     const isValidGroup = (group) => [...group].sort().join("") === "123456789";
 
     for (let i = 0; i < 9; i++) {
-      if (!isValidGroup(grid[i])) return false; // Rows
+      if (!isValidGroup(grid[i])) return false; 
       const col = grid.map((row) => row[i]);
-      if (!isValidGroup(col)) return false; // Columns
+      if (!isValidGroup(col)) return false;
     }
 
     // Check 3x3 blocks
