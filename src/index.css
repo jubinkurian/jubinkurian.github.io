@@ -19,6 +19,8 @@
   /* Borders & Shadows */
   --border-color: #e0e0e0;
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --sudoku-border: #cccccc;
+  --highlight-sudoku-bg: #ffeeba;
 
   /* Header Specific */
   --header-bg-light: #f8f9fa;
@@ -47,6 +49,8 @@
   /* Borders & Shadows */
   --border-color: #333333;
   --shadow-color: rgba(0, 0, 0, 0.3);
+  --sudoku-border: #555555;
+  --highlight-sudoku-bg: #504628;
 
   /* Component Specific */
   --header-bg: var(--header-bg-dark);
